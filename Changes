@@ -2,5 +2,8 @@ Revision history for Crypt-OpenSSL-ConfiguredAPI.
 
 {{$NEXT}}
 
-	- Original Early Version - likely to change before official release
+0.01 -- Sun Jul 23 22:41:17 ADT 2023
 
+    - 10fc887 Add .gitignore
+    - b95aa79 Add Github actions for testing
+    - f75c478 Initial Version
