@@ -20,7 +20,7 @@ value.
 
 ## get\_configured\_api()
 
-Returns the value of the OPENSSL\_CONFIGURED\_API if it is defined or undef if it is undefined
+Returns the value of the OPENSSL\_CONFIGURED\_API if it is defined or 0 if it is undefined
 
 Arguments:
 
