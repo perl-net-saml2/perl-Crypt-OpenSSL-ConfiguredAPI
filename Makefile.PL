@@ -55,16 +55,25 @@ if ($Config{myuname} =~ /sunos|solaris/i) {
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Get the Configured API level if it is defined",
   "AUTHOR" => "Timothy Legge <timlegge\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "Crypt::OpenSSL::Guess" => 0
+  },
   "CONFIGURE_REQUIRES" => {
-    "Crypt::OpenSSL::Guess" => 0,
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "Crypt-OpenSSL-ConfiguredAPI",
   "LICENSE" => "apache",
   "MIN_PERL_VERSION" => "5.014",
   "NAME" => "Crypt::OpenSSL::ConfiguredAPI",
-  "PREREQ_PM" => {},
-  "VERSION" => "0.01",
+  "PREREQ_PM" => {
+    "Exporter" => 0,
+    "XSLoader" => 0
+  },
+  "TEST_REQUIRES" => {
+    "Crypt::OpenSSL::Guess" => 0,
+    "Test::More" => 0
+  },
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -75,7 +84,12 @@ my %WriteMakefileArgs = (
     %args,
 );
 
-my %FallbackPrereqs = ();
+my %FallbackPrereqs = (
+  "Crypt::OpenSSL::Guess" => 0,
+  "Exporter" => 0,
+  "Test::More" => 0,
+  "XSLoader" => 0
+);
 
 unless ( eval { ExtUtils::MakeMaker->VERSION('6.63_03') } ) {
   delete $WriteMakefileArgs{TEST_REQUIRES};
