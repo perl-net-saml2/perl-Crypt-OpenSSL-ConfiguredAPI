@@ -7,7 +7,7 @@ use warnings;
 
 require Exporter;
 
-our $VERSION  = "0.01";
+our $VERSION  = "0.02";
 
 our @ISA = qw(Exporter);
 
@@ -47,7 +47,7 @@ value.
 
 =head2 get_configured_api()
 
-Returns the value of the OPENSSL_CONFIGURED_API if it is defined or undef if it is undefined
+Returns the value of the OPENSSL_CONFIGURED_API if it is defined or 0 if it is undefined
 
 Arguments:
 
