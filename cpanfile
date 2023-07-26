@@ -15,6 +15,7 @@ on 'test' => sub {
 };
 
 on 'configure' => sub {
+  requires "Crypt::OpenSSL::Guess" => "0";
   requires "ExtUtils::MakeMaker" => "0";
 };
 

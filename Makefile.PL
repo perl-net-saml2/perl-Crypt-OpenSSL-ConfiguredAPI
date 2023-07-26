@@ -59,6 +59,7 @@ my %WriteMakefileArgs = (
     "Crypt::OpenSSL::Guess" => 0
   },
   "CONFIGURE_REQUIRES" => {
+    "Crypt::OpenSSL::Guess" => 0,
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "Crypt-OpenSSL-ConfiguredAPI",
@@ -73,7 +74,7 @@ my %WriteMakefileArgs = (
     "Crypt::OpenSSL::Guess" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
